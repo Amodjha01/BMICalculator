@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>My Little Innovation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monofett&family=Montserrat:wght@900&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  </head>
+  <body>
+    <section id="Describe">
+
+    <div class="row">
+
+    <div class=" title col-lg-6">
+
+    <h1>BMI CALCULATOR</h1>
+    <p>Body mass index is a value derived from the mass and height of a person. The BMI is defined as the body mass divided by the square of the body height, and is expressed in units of kg/m²</p>
+
+    </div>
+
+    <div class ="col-lg-6">
+    <img class="top-pic" src="images/bmipic.jpg" alt="healh_pic">
+    </div>
+
+    </div>
+    </section>
+    <section id="units">
+
+      <p>If you are not so familiar with unit conversion,don't worry.We are here to help you out.</p>
+      <h2>Just press the button and get the value</h2>
+      <button class="conv-button btn btn-dark"type="button" onclick="conv()">Click me</button><br>
+      <label class="l1"for="inFeet">Your height in meter:</label>
+      <input type="text" id="infeet">
+
+
+    </section>
+
+    <section id="final">
+
+      <div class="Calculation">
+        <h2>Check your BMI and index wise condition</h2>
+        <button class="btn btn-lg btn-outline-light"type="button" onclick="bmiCalculator()">Click me</button>
+        <form class="form1" action="index.html" method="post">
+          <label class="l1"for="weight">Your weight:</label>
+          <input type="text" id="weight">
+          <br>
+          <label class="l1" for="height">Your Height:</label>
+          <input type="text" id="height">
+          <br>
+          <label class="l1"for="bmi">Your Bmi:</label>
+          <br>
+          <textarea id="bmi" rows="4" cols="50"></textarea>
+        </form>
+        </div>
+
+      </section>
+
+      <section class = "review">
+
+          <a class="btn btn-outline-info" href="https://docs.google.com/forms/d/e/1FAIpQLSeXhxRtK9ie2eR6D8GaSei5JJhrWN8tlUE1lhMdWtSz_dQCGA/viewform?usp=sf_link" role="button"> Send Us Your feedback</a>
+
+      </section>
+
+    <script type="text/javascript">
+      function conv(){
+        var height_in_feet = prompt("Height in feet:");
+        var height_in_meter = Math.round(height_in_feet/3.28);
+        return document.getElementById('infeet').value = height_in_meter;
+      }
+
+    </script>
+    <script>
+      function bmiCalculator (weight,height) {
+        var weight = prompt("Your weight:");
+        document.getElementById('weight').value = weight;
+        var height = prompt("Your height:");
+        document.getElementById('height').value = height;
+        var bmi = weight/Math.pow(height,2);
+        bmi = Math.round(bmi);
+      if(bmi < 18.5){
+          return document.getElementById('bmi').innerHTML = bmi + ", so You are underweight";
+      }
+      if(bmi >= 18.5 && bmi<=24.9){
+          return document.getElementById('bmi').innerHTML = bmi + ", so You have a normal weight";
+      }
+      else{
+          return document.getElementById('bmi').innerHTML = bmi + ", so You are overweight";
+      }
+
+      }
+</script>
+  </body>
+</html>

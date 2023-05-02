@@ -1,0 +1,69 @@
+
+body{
+  font-family: "Montserrat";
+}
+h1{
+  font-family: "Montserrat-Bold";
+  font-weight:bolder;
+}
+h2{
+  font-family: "Montserrat-Bold";
+  font-weight: bolder;
+
+}
+p{
+  font-family: "Montserrat-Black";
+  font-weight: bold;
+  font-size: 1.5rem;
+
+}
+
+#Describe{
+  padding:5%;
+  background-color: #66DE93;
+  color:#fff;
+}
+
+.title{
+  text-align: left;
+  padding: 3% 8%;
+}
+
+.top-pic{
+  margin: 50px;
+  border-radius: 100px;
+  width:30;
+}
+
+@media (max-width:1028px){
+  #Describe{
+    text-align: center;
+  }
+  .title{
+    padding: 7% 15%;
+    text-align: center;
+  }
+}
+
+#units{
+  text-align:center;
+  padding:5% 10%;
+}
+
+.conv-button{
+  margin: 4px 2px
+}
+.l1{
+  margin:10px auto;
+  font-family: "Ubuntu";
+  font-size: 1.5rem;
+}
+#final{
+  text-align: center;
+  background-color: #66DE93;
+  padding: 6% 13%;
+}
+.review{
+  text-align: center;
+  padding: 3% 5%;
+}
